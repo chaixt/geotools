@@ -138,28 +138,28 @@ public class MySQLFilterToSQL extends FilterToSQL {
             else {
              
                 if (filter instanceof Contains) {
-                    out.write("Contains(");
+                    out.write("ST_Contains(");
                 }
                 else if (filter instanceof Crosses) {
-                    out.write("Crosses(");
+                    out.write("ST_Crosses(");
                 }
                 else if (filter instanceof Disjoint) {
-                    out.write("Disjoint(");
+                    out.write("ST_Disjoint(");
                 }
                 else if (filter instanceof Equals) {
-                    out.write("Equals(");
+                    out.write("ST_Equals(");
                 }
                 else if (filter instanceof Intersects) {
-                    out.write("Intersects(");
+                    out.write("ST_Intersects(");
                 }
                 else if (filter instanceof Overlaps) {
-                    out.write("Overlaps(");
+                    out.write("ST_Overlaps(");
                 }
                 else if (filter instanceof Touches) {
-                    out.write("Touches(");
+                    out.write("ST_Touches(");
                 }
                 else if (filter instanceof Within) {
-                    out.write("Within(");
+                    out.write("ST_Within(");
                 }
                 else {
                     throw new RuntimeException("Unknown operator: " + filter);
